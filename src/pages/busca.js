@@ -96,13 +96,17 @@ function Busca() {
                     </div>
                     <div className="col-md-4">
                         <label className="form-label">Curso</label>
-                        <input
-                            type="text"
-                            className="form-control"
+                        <select
+                            className="form-select"
                             name="curso"
                             value={filtros.curso}
                             onChange={handleInputChange}
-                        />
+                        >
+                            <option value="">Todos</option>
+                            <option value="monografia">Engenharia da Computação</option>
+                            <option value="artigo_revista">Engenharia Metalurgica</option>
+                            <option value="artigo_congresso">Arquitetura</option>
+                        </select>
                     </div>
                     <div className="col-md-4">
                         <label className="form-label">Tipo</label>
@@ -112,7 +116,7 @@ function Busca() {
                             value={filtros.tipo}
                             onChange={handleInputChange}
                         >
-                            <option value="">Selecione...</option>
+                            <option value="">Todos</option>
                             <option value="monografia">Monografia</option>
                             <option value="artigo_revista">Artigo de Revista</option>
                             <option value="artigo_congresso">Artigo de Congresso</option>
@@ -126,7 +130,7 @@ function Busca() {
                             value={filtros.status}
                             onChange={handleInputChange}
                         >
-                            <option value="">Selecione...</option>
+                            <option value="">Todos</option>
                             <option value="em_andamento">Em Andamento</option>
                             <option value="concluida">Concluída</option>
                         </select>
